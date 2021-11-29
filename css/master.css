@@ -1,0 +1,355 @@
+
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+ul
+{
+  list-style: none;
+}
+a
+{
+  text-decoration: none;
+}
+.container
+{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:15px;
+  padding-right: 15px;
+}
+
+@media (min-width:768px)
+{
+  .container
+  {
+    width:750px;
+  }
+}
+@media (min-width:992px)
+{
+  .container
+  {
+    width:970px;
+  }
+}
+@media (min-width: 1200px)
+{
+  .container {
+    width: 1170px;
+  }
+}
+/* main Heading */
+.specialH
+{
+  text-align: center;
+}
+
+.specialH h1
+{
+  position:relative;
+  font-weight: normal;
+  margin-bottom: 70px;
+  font-size: 50px;
+}
+.specialH h1::before
+{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  bottom: -30px;
+}
+.specialH h1::after
+{
+  content: "";
+  position: absolute;
+  width:20px;
+  height: 20px;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color:white;
+}
+/* end main Heading */
+/* media */
+
+/* start header */
+.header
+{
+  position: absolute;
+  width:100%;
+  right: 0;
+  z-index: 555;
+  background-color: rgba(0 ,0 , 0, .5);
+}
+.header .container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container ul
+{
+  display: flex;
+  color: white;
+}
+
+.header ul li a
+{
+  padding: 30px 10px;
+  font-size: 22px;
+  color:white;
+}
+.header ul li a:hover
+{
+  color:#DE9D3C;
+}
+/* end Header */
+/* strat landing */
+.landing
+{
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.landing::after
+{
+  content: "";
+  position: absolute;
+  width:100%;
+  height: 100%;
+  right:0;
+  top:0;
+  background-color: rgba(0 ,0 , 0, .5);
+}
+.landing .text
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 5555;
+}
+.landing h1
+{
+  font-size: 60px;
+  font-weight: normal;
+}
+.landing span
+{
+  color:#DE9D3C;
+}
+
+.landing .btnL
+{
+  width:200px;
+  height:40px;
+  background-color: #DE9D3C;
+  border:none;
+  border-radius:10px;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+}
+.landing .btnL:hover
+{
+  background-color: #555;
+}
+/* books */
+.books
+{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f6f6f6;
+}
+.books .specialH h1::after
+{
+  background-color: #f6f6f6;
+}
+.books .card
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  text-align: center;
+}
+.books .card .Box
+{
+  box-shadow: 2px 2px 25px rgba(7,7,7, .2);
+  border-radius: 15px;
+  transition: .5s;
+  height: 600px;
+  padding: 30px 10px;
+
+
+}
+.books .card .Box:hover
+{
+  transform: scale(1.05);
+}
+
+.books .Box .images
+{
+  text-align: center;
+  height: 45%;
+}
+.books .Box img
+{
+  width:50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.books .Box .text
+{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.books .Box .text h1
+{
+  font-weight: normal;
+  color:#000;
+}
+.books .Box p
+{
+  color:#777;
+  line-height: 1.6;
+  text-align: justify;
+}
+.books .btnB
+{
+  width: 200px;
+  height: 40px;
+  background-color: #DE9D3C;
+  border: none;
+  border-radius: 10px;
+  margin-top: 40px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.books .btnB:hover
+{
+  background-color: #555;
+}
+/* creators */
+.creators
+{
+  padding-top:100px;
+  padding-bottom:100px;
+
+}
+.creators .creator
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  grid-gap:20px;
+  text-align: center;
+}
+.creator .Box
+{
+  padding-bottom: 15px;
+  background-color: white;
+  box-shadow: 2px 2px 25px rgba(7,7,7, .2);
+  border-radius: 15px;
+  padding-top: 30px;
+  transition: .5s;
+  height: 600px;
+
+}
+.creator .Box:hover
+{
+  transform: scale(1.05);
+}
+.creator .Box .images
+{
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creator .Box .images img
+{
+  width: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+}
+.creator .info
+{
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.creator .info h1
+{
+  font-weight: normal;
+  color:#000;
+}
+.creator .info p
+{
+  color:#777;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.creators .btnC
+{
+  width: 200px;
+  height: 40px;
+  background-color: #DE9D3C;
+  border: none;
+  border-radius: 10px;
+  margin-top: 40px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.creators .btnC:hover
+{
+  background-color: #555;
+  /* background-image: linear-gradient(to left,#DE9D3C,#555); */
+}
+/* Footer */
+.Footer
+{
+  background-color: #DE9D3C;
+  text-align: center;
+  padding:30px 10px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.Footer ul
+{
+  display: flex;
+}
+.Footer li
+{
+  margin-right: 10px;
+}
+/*  */

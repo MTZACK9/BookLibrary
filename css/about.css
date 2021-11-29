@@ -1,0 +1,182 @@
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+ul
+{
+  list-style: none;
+}
+a
+{
+  text-decoration: none;
+}
+body
+{
+  background-color: #ddd;
+}
+.container
+{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:15px;
+  padding-right: 15px;
+}
+
+@media (min-width:768px)
+{
+  .container
+  {
+    width:750px;
+  }
+}
+@media (min-width:992px)
+{
+  .container
+  {
+    width:970px;
+  }
+}
+@media (min-width: 1200px)
+{
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start header */
+.header
+{
+  position: absolute;
+  width:100%;
+  top:0;
+  right: 0;
+  z-index: 555;
+  background-color: rgba(0 ,0 , 0, .5);
+
+}
+.header .container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.header .container ul
+{
+  display: flex;
+  color: white;
+}
+@media (max-width:767px)
+{
+  .header .container ul
+  {
+    display: none;
+  }
+}
+.header ul li a
+{
+  padding: 30px 10px;
+  font-size: 22px;
+  color:white;
+}
+.header ul li a:hover
+{
+  color:#DE9D3C;
+}
+/* landing */
+.landing
+{
+  background-image: url(../images/ANI.jpeg);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.landing::after
+{
+  content: "";
+  position: absolute;
+  top:0;
+  right: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0 ,0 , 0, .6)
+}
+.landing .text
+{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 333;
+  background-color: #ffffff10;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.landing p
+{
+  line-height: 1.8;
+
+  font-size: 20px;
+  text-align: justify;
+  z-index: 444;
+}
+.landing .btnL
+{
+  width:200px;
+  height:40px;
+  background-color: rgba(130,130,130,.6);
+  border:none;
+  border-radius:8px;
+  margin-top: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+.landing .btnL:hover
+{
+  background-color: #DE9D3C;
+}
+@media (max-width:767px)
+{
+  .landing .text
+  {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 333;
+    background-color: #ffffff10;
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .landing p
+  {
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: justify;
+    z-index: 444;
+  }
+}
+@media (max-width:992px)
+{
+  .landing .text
+  {
+    width: 100%;
+  }
+}

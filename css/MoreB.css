@@ -1,0 +1,259 @@
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+ul
+{
+  list-style: none;
+}
+a
+{
+  text-decoration: none;
+}
+body
+{
+  /* background-color: #ddd; */
+}
+.container
+{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:15px;
+  padding-right: 15px;
+}
+
+@media (min-width:768px)
+{
+  .container
+  {
+    width:750px;
+  }
+}
+@media (min-width:992px)
+{
+  .container
+  {
+    width:970px;
+  }
+}
+@media (min-width: 1200px)
+{
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start header */
+.header
+{
+  position: absolute;
+  width:100%;
+  top:0;
+  right: 0;
+  z-index: 555;
+  background-color: rgba(0 ,0 , 0, .5);
+
+}
+.header .container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.header .container ul
+{
+  display: flex;
+  color: white;
+}
+@media (max-width:767px)
+{
+  .header .container ul
+  {
+    display: none;
+  }
+}
+.header ul li a
+{
+  padding: 30px 10px;
+  font-size: 22px;
+  color:white;
+}
+.header ul li a:hover
+{
+  color:#DE9D3C;
+}
+/* landing */
+.specialH
+{
+  text-align: center;
+}
+
+.specialH h1
+{
+  position:relative;
+  font-weight: normal;
+  margin-bottom: 70px;
+  font-size: 50px;
+}
+@media (max-width:767px)
+{
+  .specialH h1
+  {
+    font-size: 40px;
+  }
+}
+.specialH h1::before
+{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  bottom: -30px;
+}
+.specialH h1::after
+{
+  content: "";
+  position: absolute;
+  width:20px;
+  height: 20px;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color:white;
+}
+.landing
+{
+  background-image: url(../images/MoreBWall.jpg);
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+}
+
+.landing::after
+{
+  content: "";
+  position: absolute;
+  top:0;
+  right: 0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0 ,0 , 0, .4)
+}
+.landing .text
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 333;
+  text-align: center;
+}
+.landing h1
+{
+  font-size: 60px;
+  font-weight: normal;
+}
+@media (max-width:767px)
+{
+  .landing h1
+  {
+    font-size: 35px;
+    font-weight: normal;
+  }
+}
+.landing span
+{
+  color:#DE9D3C;
+}
+/* MoreB */
+.books
+{
+  /* padding-top: 100px; */
+  padding-bottom: 100px;
+}
+.MoreB
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-gap: 20px;
+  text-align: center;
+}
+.MoreB .Box
+{
+
+  box-shadow: 2px 2px 25px rgba(7,7,7, .2);
+  border-radius: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  transition: .5s;
+  height: 600px;
+}
+.MoreB .Box:hover
+{
+  transform: scale(1.05);
+}
+.MoreB .Box .images
+{
+  text-align: center;
+  height: 45%;
+}
+.MoreB .Box img
+{
+  width:50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.MoreB .Box .text
+{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.MoreB .Box .text h1
+{
+  font-weight: normal;
+  color:#000;
+}
+.MoreB .Box p
+{
+  color:#777;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* Footer */
+.Footer
+{
+  background-color: #DE9D3C;
+  text-align: center;
+  padding:30px 10px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.Footer ul
+{
+  display: flex;
+}
+.Footer li
+{
+  margin-right: 10px;
+}
