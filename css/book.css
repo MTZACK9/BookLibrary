@@ -222,6 +222,13 @@ body
   line-height: 2;
   font-size: 18px;
 }
+@media (max-width:767px)
+{
+  .details .infoB p
+  {
+    text-align: justify;
+  }
+}
 
 
 /* creator */
@@ -276,6 +283,13 @@ body
   color: #333;
   line-height: 2;
   font-size: 18px;
+}
+@media (max-width:767px)
+{
+  .creator .infoC p
+  {
+    text-align: justify;
+  }
 }
 /* buttons */
 .btns
